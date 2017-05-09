@@ -9,7 +9,7 @@ import { Hero } from './hero';
 export class AppComponent {
   title = 'Tour of Heroes';
   heroes: Hero[];
-  
+  selectedHero: Hero;
  constructor(){
    const HEROES: Hero[] = [
   { id: 11, name: 'Mr. Nice' },
@@ -27,4 +27,9 @@ export class AppComponent {
   this.heroes = HEROES;
 
  }
+
+ onSelect(hero: Hero): void {
+  this.selectedHero = hero;
+}
+
 }
